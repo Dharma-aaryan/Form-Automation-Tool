@@ -1,12 +1,40 @@
-# React + Vite
+# 🛠️ Low-Code/No-Code Form Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **dynamic low-code/no-code form builder** built with **ReactJS**, offering an intuitive drag-and-drop interface and reusable React hooks to allow users to effortlessly create, manage, and preview interactive forms — no coding required.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Drag-and-Drop Form Creation**  
+  Create forms by dragging components (text fields, dropdowns, radio buttons, etc.) from a palette into the canvas.
 
-## Expanding the ESLint configuration
+- 🔁 **Reusable React Hooks**  
+  Built using reusable custom hooks for modularity and cleaner code.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧩 **Field-Level Customization**  
+  Add, edit, delete fields dynamically within each form.
+
+- 📋 **Multiple Forms Support**  
+  Users can create and manage **multiple forms** within a dashboard.
+
+- 👁️ **Live Preview**  
+  See a real-time preview of the form before publishing or using it.
+
+- 🧹 **Edit/Delete Entire Forms**  
+  Easily update or remove forms entirely as needed.
+
+- 📊 **Data View**  
+  Submitted form data is displayed on the homepage in a clean **tabular format** for easy reference.
+
+## 📸 Screenshots
+
+*Add form preview, dashboard, and data table screenshots here.*
+
+## ⚙️ Tech Stack
+
+- **Frontend**: ReactJS, Vite
+- **State Management**: useState, custom hooks
+- **Styling**: Tailwind CSS / CSS Modules *(mention what you used)*
+- **Build Tool**: Vite
+
+## 🧱 Folder Structure (Example)
+
