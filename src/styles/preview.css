@@ -1,0 +1,161 @@
+/*──────────────────────────────────────────────────────
+  Preview Form Styles
+──────────────────────────────────────────────────────*/
+
+.form-field {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.field-name {
+  font-weight: 600;
+  color: #333;
+}
+.required-asterisk {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.field-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Inputs, selects, textareas */
+.form-field input,
+.form-field textarea,
+.form-field select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Radio & Checkbox groups — vertical */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Submit button inside form preview */
+.submit-preview {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Inline header text (editable) */
+.header-inline-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px 0;
+  cursor: text;
+}
+.header-inline-input {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Shared inline‐editing styling for header & submit */
+.header-inline-text,
+.submit-inline-text {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.header-inline-text:hover {
+  background: lightgrey;
+  color: #fff;
+  border-color: lightgrey;
+}
+.submit-inline-text:hover {
+  background: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
+
+/*──────────────────────────────────────────────────────
+  Data-View Modal & Table
+──────────────────────────────────────────────────────*/
+.data-popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.data-popup {
+  background: #fff;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.close-data-popup {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+.data-table th {
+  background: #f0f0f0;
+}

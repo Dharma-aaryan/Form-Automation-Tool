@@ -1,0 +1,309 @@
+/* form.css */
+
+/*──────────────────────────────────────────────────────
+  Form-Field Container & Edit Button
+──────────────────────────────────────────────────────*/
+.form-field {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 32px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .form-field .edit-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    z-index: 20;
+  }
+  .form-field .edit-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Move/Delete Controls (arrows & “X”)
+  ──────────────────────────────────────────────────────*/
+  .form-field .controls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 15;
+  }
+  .control-btn {
+    width: 28px;
+    height: 28px;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .control-btn:hover {
+    background: rgba(0,0,0,0.1);
+    color: #333;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Field Header & Required Asterisk
+  ──────────────────────────────────────────────────────*/
+  .field-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .field-name {
+    font-weight: 600;
+    color: #333;
+  }
+  .required-asterisk {
+    color: #e74c3c;
+    margin-left: 4px;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Field Preview Inputs & Buttons
+  ──────────────────────────────────────────────────────*/
+  .field-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Checkbox & Radio Groups (vertical)
+  ──────────────────────────────────────────────────────*/
+  .checkbox-group,
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .checkbox-group label,
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+  .checkbox-group input,
+  .radio-group input {
+    margin-right: 6px;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Submit-Preview Button
+  ──────────────────────────────────────────────────────*/
+  .submit-preview {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .submit-preview:hover {
+    background: #357ab8;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Inline Popup Wrapper
+  ──────────────────────────────────────────────────────*/
+  .inline-popup {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    max-width: 90vw;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 100;
+    animation: popupFadeIn 0.2s ease-out;
+  }
+  @keyframes popupFadeIn {
+    from { opacity: 0; transform: translate(-50%, -10px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Popup Header & Controls
+  ──────────────────────────────────────────────────────*/
+  .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .popup-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  .popup-controls {
+    display: flex;
+    gap: 12px;
+  }
+  .popup-controls button {
+    width: 36px;
+    height: 36px;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #555;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .popup-controls button:hover {
+    background: rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Popup Body & Fields
+  ──────────────────────────────────────────────────────*/
+  .popup-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .popup-body label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  .popup-body input,
+  .popup-body select {
+    padding: 10px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+  }
+  .popup-body input:focus,
+  .popup-body select:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  .popup-required {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Options Editor (single/multi/dropdown)
+  ──────────────────────────────────────────────────────*/
+  .options-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .option-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .option-row input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  .option-row button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #d9534f;
+    cursor: pointer;
+  }
+  .option-row button:hover {
+    color: #c9302c;
+  }
+  .add-option-btn {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: #4a90e2;
+    background: #f0f8ff;
+    border: 1px dashed #4a90e2;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .add-option-btn:hover {
+    background: #e6f7ff;
+    color: #357ab8;
+  }
+  
+  /*──────────────────────────────────────────────────────
+    Close Popup Button
+  ──────────────────────────────────────────────────────*/
+  .close-popup {
+    margin-top: 8px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background: #4a90e2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .close-popup:hover {
+    background: #357ab8;
+    transform: translateY(-1px);
+  }
+  
