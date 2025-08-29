@@ -36,5 +36,3 @@ A **dynamic low-code/no-code form builder** built with **ReactJS**, offering an 
 - **Styling**: Tailwind CSS / CSS Modules *(mention what you used)*
 - **Build Tool**: Vite
 
-## 🧱 Folder Structure (Example)
-
